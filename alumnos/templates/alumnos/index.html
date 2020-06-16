@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Alumnos</h1>
+    {% if alumno %}
+    <table>
+      <tr>
+        <td>Nombre</td>
+        <td>Apellido</td>
+        <td>Promedio</td>
+      </tr>
+      {% for item in alumno %}
+      <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.last_name}}</td>
+        <td>{{item.pweb.promedio}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% else %}
+    <p>No polls are available.</p>
+    {% endif %}
+  </body>
+</html>

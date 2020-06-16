@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    {% block content %}
+
+    <form method="POST">{% csrf_token %}
+        {{form.as_p}}
+        {{soa.as_p}}
+        <!-- <label for="name">Primer nombre</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="last_name">Apellido</label><br>
+        <input type="text" name="last_name"><br>
+
+        <label for="pweb">Programación Web</label><br>
+        <input type="text" name="p_u1"  placeholder="Unidad 1"><br>
+        <input type="text" name="p_u2"  placeholder="Unidad 2"><br>
+        <input type="text" name="p_u3"  placeholder="Unidad 3"><br>
+
+
+        <label for="arqui">Arquitectura Orientada a Servicios</label><br>
+        <input type="text" name="a_u1" placeholder="Unidad 1"><br>
+        <input type="text" name="a_u2" placeholder="Unidad 2"><br>
+        <input type="text" name="a_u3" placeholder="Unidad 3"><br> -->
+        <input type="submit" value="Save" />
+    </form>
+    {% endblock %}
+  </body>
+</html>
