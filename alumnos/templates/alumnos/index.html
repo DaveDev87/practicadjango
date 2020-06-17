@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      body{
+        font-family: sans-serif;
+      }
+      td {
+        border-style: ridge;
+        padding: 12px;
+      }
+    </style>
   </head>
   <body>
     <h1>Alumnos</h1>
@@ -12,15 +21,51 @@
       <tr>
         <td>Nombre</td>
         <td>Apellido</td>
+        <td>Unidad 1</td>
+        <td>Unidad 2</td>
+        <td>Unidad 3</td>
         <td>Promedio</td>
       </tr>
+      <h2>
+        Programación Web
+      </h2>
+
       {% for item in alumno %}
       <tr>
         <td>{{item.name}}</td>
         <td>{{item.last_name}}</td>
+        <td>{{item.pweb.unit1}}</td>
+        <td>{{item.pweb.unit2}}</td>
+        <td>{{item.pweb.unit3}}</td>
         <td>{{item.pweb.promedio}}</td>
       </tr>
       {% endfor %}
+      
+    </table>
+    <table>
+      <tr>
+        <td>Nombre</td>
+        <td>Apellido</td>
+        <td>Unidad 1</td>
+        <td>Unidad 2</td>
+        <td>Unidad 3</td>
+        <td>Promedio</td>
+      </tr>
+      <h2>
+        Arquitectura Orientada a Servicios
+      </h2>
+
+      {% for item in alumno %}
+      <tr>
+        <td>{{item.name}}</td>
+        <td>{{item.last_name}}</td>
+        <td>{{item.arqui.unit1}}</td>
+        <td>{{item.arqui.unit2}}</td>
+        <td>{{item.arqui.unit3}}</td>
+        <td>{{item.arqui.promedio}}</td>
+      </tr>
+      {% endfor %}
+      
     </table>
     {% else %}
     <p>No polls are available.</p>
